@@ -2,12 +2,12 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFrameworks>net472;net5.0-windows;net6.0-windows</TargetFrameworks>
+		<TargetFramework>net7.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ApplicationIcon>Resources\as.ico</ApplicationIcon>
-		<Version>0.16.0.0</Version>
-		<AssemblyVersion>0.16.0.0</AssemblyVersion>
-		<FileVersion>0.16.0.0</FileVersion>
+		<Version>0.16.0.1</Version>
+		<AssemblyVersion>0.16.0.1</AssemblyVersion>
+		<FileVersion>0.16.0.1</FileVersion>
 		<Copyright>Copyright © Perfare 2018-2022</Copyright>
 		<DebugType>embedded</DebugType>
 	</PropertyGroup>
@@ -53,14 +53,13 @@
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' != 'net472' ">
-		<PackageReference Include="OpenTK" Version="4.6.7" />
+		<PackageReference Include="OpenTK" Version="4.7.5" />
 		<Reference Include="OpenTK.WinForms">
 			<HintPath>Libraries\OpenTK.WinForms.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
-		<PackageReference Include="OpenTK" Version="3.1.0" />
 		<PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
 	</ItemGroup>
 
